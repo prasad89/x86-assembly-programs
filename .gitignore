@@ -1,0 +1,4 @@
+#Ignoring files
+*.o
+*.out
+*.lst
