@@ -17,10 +17,10 @@ lp:
     mov eax, 4
     mul ecx
     add ebx, eax
+	cmp edi, dword[ebx] ;; min
+    cmovg edi, dword[ebx]
     cmp esi, dword[ebx] ;; max
     cmovl esi, dword[ebx]
-    cmp edi, dword[ebx] ;; min
-    cmovg edi, dword[ebx]
     inc ecx
     cmp ecx, 6
     jl lp
