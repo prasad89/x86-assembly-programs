@@ -1,7 +1,7 @@
 section .data
     arr dd 10, 30, 1, 100, 50, 20, 40
     max db "Max:%d", 10, 0
-    min db "Min %d", 10, 0
+    min db "Min:%d", 10, 0
 
 section .text
     global main

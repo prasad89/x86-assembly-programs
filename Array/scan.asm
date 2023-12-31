@@ -1,7 +1,7 @@
 section .data
-    msg db "Enter number of Elements: ", 10, 0
+    msg db "Enter number of Elements:", 10, 0
     input db "%d", 0
-    msg2 db "Element of array is: %d", 10, 0
+    msg2 db "Element of array is:%d", 10, 0
 
 section .bss
     n resd 1
