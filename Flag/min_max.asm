@@ -17,9 +17,9 @@ lp:
     mov eax, 4
     mul ecx
     add ebx, eax
-	cmp edi, dword[ebx] ;; min
+	cmp edi, dword[ebx] ; min
     cmovg edi, dword[ebx]
-    cmp esi, dword[ebx] ;; max
+    cmp esi, dword[ebx] ; max
     cmovl esi, dword[ebx]
     inc ecx
     cmp ecx, 6

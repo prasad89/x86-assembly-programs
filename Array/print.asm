@@ -7,13 +7,13 @@ section .text
     extern printf
 
 main:
-    xor ecx, ecx      ;; index
+    xor ecx, ecx      ; index
 
 lp:
-    mov ebx, Array    ;; base address of the array
-    mov eax, 4        ;; size of int
-    mul ecx           ;; index * size
-    add ebx, eax      ;; base + mul result
+    mov ebx, Array    ; base address of the array
+    mov eax, 4        ; size of int
+    mul ecx           ; index * size
+    add ebx, eax      ; base + mul result
     cmp dword [ebx], -1
     jz terminate
     pusha

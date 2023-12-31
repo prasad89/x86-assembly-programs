@@ -16,12 +16,12 @@ main:
 
 lp:
     push edx
-    mov esi, [ebp + 12]			;; argv
-    mov edi, [ebp + 16]			;; envp
-    push dword [esi + edx * 4]	;; argv[i]
-    push edx					;; i
-    push dword [edi + edx * 4]	;; envp[i]
-    push edx					;; i
+    mov esi, [ebp + 12]			; argv
+    mov edi, [ebp + 16]			; envp
+    push dword [esi + edx * 4]	; argv[i]
+    push edx					; i
+    push dword [edi + edx * 4]	; envp[i]
+    push edx					; i
     push msg2
     call printf
     add esp, 20
