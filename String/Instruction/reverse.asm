@@ -1,16 +1,16 @@
 section .data
-    string db "Reverse me"
-    len equ $-string
+    src db "Reverse me"
+    len equ $-src
 
 section .bss
-    revrese resb len
+    dest resb len
 
 section .text
     global main
 
 main:
-    mov esi, string
-    mov edi, revrese
+    mov esi, src
+    mov edi, dest
     mov ecx, len
     add esi, len
     dec esi
@@ -25,7 +25,7 @@ lp:
 write:
     mov eax, 4
     mov ebx, 1
-    mov ecx, revrese
+    mov ecx, dest
     mov edx, len
     int 0x80
 

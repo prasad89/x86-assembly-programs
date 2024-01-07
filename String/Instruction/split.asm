@@ -1,6 +1,6 @@
 section .data
-    source db "Low Level Programming", 0
-    len equ $ - source
+    src db "Low Level Programming", 0
+    len equ $ - src
 
 section .bss
     first_string resb len
@@ -12,11 +12,11 @@ section .text
     global main
 
 main:
-    mov edi, source
+    mov edi, src
     mov al, ' '
     repnz scasb
     mov edx, edi
-    mov esi, source
+    mov esi, src
     sub edx, esi
     mov dword[first_string_count], edx
     mov dword[first_string], esi
