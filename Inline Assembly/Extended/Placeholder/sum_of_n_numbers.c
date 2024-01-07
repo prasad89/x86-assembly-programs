@@ -14,7 +14,7 @@ int main()
         "jz endof\n\t"      // Jump to endof if n is zero
         "jmp lp\n\t"        // Jump back to lp
         "endof:\n\t"
-        "movl %2, %0"       // Move sum to result
+        "movl %2, %0"        // Move sum to result
         : "=r"(result)       // Output operand: "=r" means write-only operand
         : "r"(n),            // Input operand: "r" means read-only operand
           "r"(sum),          // Input operand

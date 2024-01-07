@@ -17,7 +17,7 @@ int main()
         "jmp lp\n\t"          // Jump back to lp
         "endof:\n\t"
         "movl %eax, fact\n\t" // Move the value in EAX to fact
-        "popa\n\t");           // Restore the registers from the stack
+        "popa\n\t");          // Restore the registers from the stack
 
     printf("The factorial is:%d\n", fact);
     return 0;
