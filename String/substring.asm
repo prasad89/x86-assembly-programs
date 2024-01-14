@@ -1,6 +1,6 @@
 section .data
     string db "Low Level Assembly Programming - LLAP", 0
-    substr db "LLAP", 0
+    substring db "LLAP", 0
     found db "Substring found", 10, 0
     notfound db "Substring not found", 10, 0
 
@@ -10,7 +10,7 @@ section .text
 
 main:
     mov esi, string
-    mov edi, substr
+    mov edi, substring
 
 lp:
     mov al, byte[edi]
@@ -34,7 +34,7 @@ lp3:
     inc esi
     cmp byte[edi], 0
     jz true
-    mov edi, substr
+    mov edi, substring
     jmp lp
 
 true:
