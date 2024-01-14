@@ -5,7 +5,7 @@ section .data
 
 section .bss
 	n resd 1
-	Array resd 10
+	array resd 10
 
 section .text
 	global main
@@ -23,7 +23,7 @@ main:
 
 	xor ecx,ecx
 scan:
-	mov ebx,Array
+	mov ebx,array
 	mov eax,4
 	mul ecx
 	add ebx,eax
@@ -46,9 +46,9 @@ sort:
 	cmp ecx,4
 	jz reset
 
-    mov esi,Array
+    mov esi,array
 
-	mov ebx,Array
+	mov ebx,array
 	mov eax,4
 	mul ecx
 	add ebx,eax
@@ -76,7 +76,7 @@ exchange:
 reset:
 	xor ecx,ecx
 print:
-	mov ebx,Array
+	mov ebx,array
 	mov eax,4
 	mul ecx
 	add ebx,eax

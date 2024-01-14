@@ -1,5 +1,5 @@
 section .data
-    Array dd 10, 30, 1, 100, 50, 20, 40
+    array dd 10, 30, 1, 100, 50, 20, 40
     max db "Max:%d", 10, 0
     min db "Min:%d", 10, 0
 
@@ -9,11 +9,11 @@ section .text
 
 main:
     xor ecx, ecx
-    mov esi, dword[Array]
-    mov edi, dword[Array]
+    mov esi, dword[array]
+    mov edi, dword[array]
 
 lp:
-    mov ebx, Array
+    mov ebx, array
     mov eax, 4
     mul ecx
     add ebx, eax

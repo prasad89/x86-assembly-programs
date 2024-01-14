@@ -1,23 +1,29 @@
 section .data
-	string db "Low Level Assembly Programming",0
-	len equ $-string
+    src db "Low Level Assembly Programming", 0
+    length equ $-src
+
 section .bss
-	copy resb len
+    dest resb length
+
 section .text
-	global main
-	extern puts
+    global main
+    extern puts
+
 main:
-	mov ecx,len
-	xor edx,edx
+    mov ecx, length
+    xor edx, edx
+
 lp:
-	xor eax,eax
-	mov al,byte[string+edx]
-	mov byte[copy+edx],al
-	inc edx
-	loop lp
+    xor eax, eax
+    mov al, byte [src + edx]
+    mov byte [dest + edx], al
+    inc edx
+    loop lp
+
 endof:
-	push copy
-	call puts
-	add esp,4
-	
-	ret
+    push dest
+    call puts
+    add esp, 4
+
+terminate:
+    ret

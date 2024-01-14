@@ -1,5 +1,5 @@
 section .data
-    Array dd 40, 10, 20, 30, 40, 10, 10, 40, 50, -1
+    array dd 40, 10, 20, 30, 40, 10, 10, 40, 50, -1
     msg db "40 Occurred %d times", 10, 0
 
 section .text
@@ -11,7 +11,7 @@ main:
     xor esi, esi
 
 lp:
-    mov ebx, Array
+    mov ebx, array
     mov eax, 4
     mul ecx
     add ebx, eax

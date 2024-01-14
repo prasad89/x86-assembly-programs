@@ -1,9 +1,9 @@
 section .data
     src db "Hello World", 10, 0
-    len equ $ - src
+    length equ $ - src
 
 section .bss
-    dest resb len
+    dest resb length
 
 section .text
     global main
@@ -11,14 +11,14 @@ section .text
 main:
     mov esi, src
     mov edi, dest
-    mov ecx, len
+    mov ecx, length
     rep movsb
 
 write:
     mov eax, 4
     mov ebx, 1
     mov ecx, dest
-    mov edx, len
+    mov edx, length
     int 0x80
 
 terminate:

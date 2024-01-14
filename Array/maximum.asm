@@ -1,5 +1,5 @@
 section .data
-    Array dd 1000, 10, 101, 20, 201, 30, 301, 40, 401, 50, 501, -1
+    array dd 1000, 10, 101, 20, 201, 30, 301, 40, 401, 50, 501, -1
     msg db "Maximum element from given array is:%d", 10, 0
 
 section .text
@@ -8,10 +8,10 @@ section .text
 
 main:
     xor ecx, ecx
-    mov esi, dword [Array]
+    mov esi, dword [array]
 
 lp:
-    mov ebx, Array
+    mov ebx, array
     mov eax, 4
     mul ecx
     add ebx, eax
