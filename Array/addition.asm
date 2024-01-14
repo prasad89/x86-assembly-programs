@@ -1,5 +1,5 @@
 section .data
-    Array dd 10, 20, 30, 40, 50, -1
+    array dd 10, 20, 30, 40, 50, -1
     msg db "The sum of array elements is:%d", 10, 0
 
 section .text
@@ -11,7 +11,7 @@ main:
     xor esi, esi
 
 lp:
-    mov ebx, Array
+    mov ebx, array
     mov eax, 4
     mul ecx
     add ebx, eax

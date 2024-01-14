@@ -1,10 +1,10 @@
 section .data
     src db "Low Level Programming", 0
-    len equ $ - src
+    length equ $ - src
 
 section .bss
-    first_string resb len
-    second_string resb len
+    first_string resb length
+    second_string resb length
     first_string_count resd 1
     second_string_count resd 1
 
