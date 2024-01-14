@@ -3,7 +3,7 @@ section .data
     length equ $-string
 
 section .bss
-    rev resb length
+    reversed resb length
 
 section .text
     global main
@@ -11,7 +11,7 @@ section .text
 
 main:
     mov ecx, length
-    mov edi, rev
+    mov edi, reversed
     mov esi, string
     add edi, ecx
     dec edi
@@ -26,7 +26,7 @@ lp:
     loop lp
 
 endof:
-    push rev
+    push reversed
     call puts
     add esp, 4
 
